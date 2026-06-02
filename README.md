@@ -4,7 +4,7 @@ A compact collection of reusable prompts for code review, reverse engineering, i
 
 ---
 
-## Spam queue-able prompts
+### Spam queue-able prompts
 
 <details>
 <summary><strong>2x review w/ subagents</strong></summary>
@@ -63,7 +63,7 @@ Continue until the work is COMPLETE and stable - stop only when zero critical TO
 
 ---
 
-## Refactoring prompts
+### Refactoring prompts
 
 <details>
 <summary><strong>JS/TS: Remove unused code & dependencies</strong></summary>
@@ -118,7 +118,7 @@ Include only the essential modules, architecture overview, data flow, interactio
 
 ---
 
-## Prompts for testing
+### Prompts for testing
 
 <details>
 <summary><strong>Whole app</strong></summary>
@@ -152,7 +152,7 @@ Automatically identify and fix bugs and edge cases as you go.
 
 ---
 
-## Longer self-steer
+### Longer self-steer
 
 <details>
 <summary><strong>Codex exec plans</strong></summary>
@@ -169,7 +169,7 @@ Create a comprehensive task list that covers every aspect of the plan so that it
 
 ---
 
-## Reverse engineer repo/extensions
+### Reverse engineer repo/extensions
 
 <details>
 <summary><strong>Chrome Web Store reverse engineering PRD</strong></summary>
@@ -182,7 +182,7 @@ Make a directory in "docs" called "{{REPO_NAME}}" and make a PRD with technical 
 
 ---
 
-## Taste / UI
+### Taste / UI
 
 <details>
 <summary><strong>Liquid glass</strong></summary>
