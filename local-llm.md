@@ -19,6 +19,8 @@ If the benchmark has a fixed system prompt or tool format, avoid changing it. A 
 - Validate generated code with real parsers before accepting it.
 - Retry only targeted failure modes: empty output, malformed JSON, malformed code, or missing tool calls.
 
+For BenchLoop-style testing, a lightweight Fastify Node.js proxy is a good default harness shape. Put it between the benchmark and `llama-server`, keep the OpenAI-compatible API surface, and pass through the original messages/tool schemas unchanged. This gives you one clean place for sampler enforcement, policy-gated repairs, targeted retries, response normalization, trace logging, and per-request diagnostics without touching the benchmark prompts.
+
 For code validation, use AST parsers rather than regex-only checks. In Node.js, Babel can validate JavaScript/TypeScript, and Lezer or another grammar parser can validate Python without shelling out to Python.
 
 ## Keep Repairs Policy-Gated
