@@ -2,7 +2,7 @@
 
 Stop prompting AI directly. Start building loops that prompt, evaluate, and decide what to do next. Design the loops: Prompt the LLM to prompt the LLM. That is the transition we'll see for the rest of 2026.
 
-This shift is visible in modern developer tools using command abstractions like `/goal` in Codex, `/loop` in Claude Code, and `/mission` in Factory Droid—shifting focus from single prompt-response commands to triggering autonomous, multi-turn task execution loops.
+This shift is visible in modern developer tools using command abstractions like `/goal` in Codex, `/loop` in Claude Code, and `/mission` in Factory Droid - shifting focus from single prompt-response commands to triggering autonomous, multi-turn task execution loops.
 
 ---
 
