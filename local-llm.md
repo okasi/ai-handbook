@@ -48,25 +48,9 @@ Longer caps can improve reasoning, but they can also reduce value and reliabilit
 
 ## Sampler Settings
 
-For instruction-tuned local models, a useful broad starting point is:
-
-```text
-temperature=1.00
-top_p=0.95
-top_k=64
-```
-
-If outputs are too loose, try stepping down gradually:
-
-```text
-temperature=0.95 top_p=0.93 top_k=58
-temperature=0.90 top_p=0.91 top_k=52
-temperature=0.85 top_p=0.90 top_k=47
-temperature=0.80 top_p=0.90 top_k=43
-temperature=0.75 top_p=0.90 top_k=40
-```
-
 Do not assume lower temperature is always better. Some models lose reasoning or tool-call recovery when sampling gets too constrained.
+
+For CoT- or reasoning-tuned models, especially Qwopus-style finetunes, keep temperature high enough to let the fine-tune express itself. In practice, `temperature=0.85` to `1.00` is often a better search range than very low temperatures. Low temperature can make the base model's safest/simple completion style dominate, which may flatten the reasoning behavior the fine-tune was meant to encourage.
 
 ## Read Failures Line by Line
 
