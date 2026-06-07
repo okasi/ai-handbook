@@ -50,9 +50,13 @@ Longer caps can improve reasoning, but they can also reduce value and reliabilit
 
 ## Sampler Settings
 
+Reference:
+- https://x.com/KyleHessling1/status/2062744362656899310
+
 Do not assume lower temperature is always better. Some models lose reasoning or tool-call recovery when sampling gets too constrained.
 
 For CoT- or reasoning-tuned models, especially Qwopus-style finetunes, keep temperature high enough to let the fine-tune express itself. In practice, `temperature=0.85` to `1.00` is often a better search range than very low temperatures. Low temperature can make the base model's safest/simple completion style dominate, which may flatten the reasoning behavior the fine-tune was meant to encourage.
+
 
 ## Read Failures Line by Line
 
