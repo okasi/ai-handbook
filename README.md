@@ -18,3 +18,11 @@ A curated collection of production-grade prompts, local LLM optimization notes, 
 Interactive, "liquid glass" landing page prompts inside `landing-pages/`:
 *   🌸 [flower-landing-page-prompt.md](./landing-pages/flower-landing-page-prompt.md) — Dark, premium Apple-inspired web agency page.
 *   🚀 [space-landing-page-prompt.md](./landing-pages/space-landing-page-prompt.md) — Cinematic space-travel single-page landing layout.
+
+---
+
+## 🛠️ Quick Start
+
+1. **Optimize Your Local Setup:** Check [local-llm.md](./local-llm.md) and [hermes.md](./hermes.md) to tune samplers and prevent agent timeouts.
+2. **Speed Up Development:** Use templates in [prompts.md](./prompts.md) for recursive self-review, reverse engineering, and refactoring.
+3. **Build Stunning UIs:** Feed the prompts in [landing-pages/](./landing-pages/) directly to an LLM/agent to generate clean, highly-interactive code.
