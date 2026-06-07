@@ -187,8 +187,13 @@ Make a directory in "docs" called "{{REPO_NAME}}" and make a PRD with technical 
 <details>
 <summary><strong>Liquid glass</strong></summary>
 
+Reference:
+
+- https://x.com/EnoReyes/status/2031051418954842148
+
 ```md
 xbox360 UI meets Spike Jonze's Her meets Liquid Glass
 ```
 
 </details>
+
