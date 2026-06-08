@@ -159,11 +159,13 @@ Automatically identify and fix bugs and edge cases as you go.
 
 Reference:
 
-- https://developers.openai.com/cookbook/articles/codex_exec_plans
-- https://x.com/nummanali/status/2030944909599842705
+- <https://developers.openai.com/cookbook/articles/codex_exec_plans>
+- <https://x.com/nummanali/status/2030944909599842705>
+- <https://x.com/TroviAI/status/2062142198745833658>
 
 ```md
 Create a comprehensive task list that covers every aspect of the plan so that it keeps you focused across compactions - at least 20 items or more if appropriate.
+Do not stop until all changes have been verified.
 ```
 
 </details>
