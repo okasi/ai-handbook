@@ -12,5 +12,14 @@ You're not supposed to prompt LLMs. You're supposed to build a system that promp
 
 ## 🔗 Key References
 
-- https://x.com/steipete/status/2063697162748260627
-- https://x.com/rohanpaul_ai/status/2063289804708835412
+- <https://x.com/steipete/status/2063697162748260627>
+- <https://x.com/rohanpaul_ai/status/2063289804708835412>
+- Autoresearch loops: <https://github.com/karpathy/autoresearch>
+- Goal coding loops (/goal in codex): <https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex>
+- Ralph loops: <https://ghuntley.com/loop/>
+
+---
+
+## For future learning
+- <https://github.com/robzilla1738/supergoal>
+- <https://x.com/Mnilax/status/2063697740526399833>
