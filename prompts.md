@@ -95,23 +95,21 @@ If issues arise, revert the version changes to the last working one and reinstal
 <summary><strong>Complete overhaul and update AGENTS.md</strong></summary>
 
 ```md
-Analyze the entire codebase and architecture to identify the key components, data flow, interfaces, initialization steps, and interaction points.
+Review every file in this repository and identify incomplete abstractions, repetitive logic, duplicate types, unclear naming, unnecessary complexity, inefficient code paths, and meaningless or outdated comments.
 
-Refactor the codebase to improve readability, structure, clarity, and maintainability so coding agents such as Codex by OpenAI, Claude Code by Anthropic, and Copilot by GitHub can understand and modify it more effectively.
+Analyze the codebase structure, key components, data flow, interfaces, initialization steps, and interaction points.
 
-Simplify logic, clarify naming, reduce complexity, eliminate technical debt, and preserve existing functionality.
+Produce and execute a task list to clean up, complete, deduplicate, consolidate, and refactor the codebase into composable, consistent, and maintainable components while preserving existing functionality.
 
-Optimize performance where practical by improving inefficient code paths, reducing unnecessary work, removing duplication, and lowering the total lines of code without over-fragmenting the project or creating too many separate files.
+Improve readability and structure so coding agents such as Codex, Claude Code, and Copilot can understand and modify the project effectively.
+
+Reduce technical debt, simplify logic, remove duplication, lower total lines of code where practical, and avoid over-fragmenting the project or creating unnecessary files.
 
 Keep the directory structure minimal and intuitive. Align directory and file names with the material-icons naming convention where applicable.
 
-Verify correctness after changes through appropriate tests, checks, or validation steps.
+Verify correctness with appropriate tests, checks, or validation steps.
 
-Update AGENTS.md so it accurately reflects the current state of the codebase and free from tech debt.
-
-Keep it concise and free from outdated or misleading information.
-
-Include only the essential modules, architecture overview, data flow, interaction points, initialization steps, and any important guidance needed by future coding agents.
+Update AGENTS.md so it accurately reflects the current codebase. Keep it concise, current, and free from outdated or misleading information. Include only the essential modules, architecture overview, data flow, interaction points, initialization steps, and important guidance for future coding agents.
 ```
 
 </details>
