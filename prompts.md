@@ -73,7 +73,9 @@ This helps clean up the codebase by eliminating unnecessary components.
 </details>
 
 <details>
-<summary><strong>JS/TS: Update dependencies (loopable)</strong></summary>
+<summary><strong>"Dependency-upgrade grinder" JS/TS: Update dependencies (Loopable)</strong></summary>
+
+  Reference: <https://x.com/ericzakariasson/status/2064122375424373131?s=20>
 
 ```md
 Loop through every outdated dependency one at a time until the list is empty and everything is green.
@@ -145,7 +147,7 @@ Automatically identify and fix bugs and edge cases as you go.
 </details>
 
 <details>
-<summary><strong>Flaky-test exterminator (loopable)</strong></summary>
+<summary><strong>Flaky-test exterminator (Loopable)</strong></summary>
 
 Reference: <https://x.com/ericzakariasson/status/2064122350866682100?s=20>
 
@@ -202,3 +204,18 @@ xbox360 UI meets Spike Jonze's Her meets Liquid Glass
 ```
 </details>
 
+---
+
+### Post-deploy
+
+<details>
+<summary><strong>Post-deploy error watch</strong></summary>
+
+Reference:
+
+- <https://x.com/ericzakariasson/status/2064122363185365430?s=20>
+
+```md
+I just shipped [thing]. /loop every 5m polling my error tracker and logs for new error groups on this service, and for each new one triage it and either push a hotfix or flag for rollback. Fall back to a heartbeat but wake immediately if a new error spikes.
+```
+</details>
