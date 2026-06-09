@@ -17,6 +17,7 @@ You're not supposed to prompt LLMs. You're supposed to build a system that promp
 - Autoresearch loops: <https://github.com/karpathy/autoresearch>
 - Goal coding loops (/goal in codex): <https://developers.openai.com/cookbook/examples/codex/using_goals_in_codex>
 - Ralph loops: <https://ghuntley.com/loop/>
+- <https://github.com/factory-ben/ralph/>
 
 ---
 
