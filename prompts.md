@@ -22,7 +22,6 @@ create more subagents right now and delegate.
 Be brutally honest about whether all work is complete,
 then repeat until no issues are found.
 ```
-
 </details>
 
 <details>
@@ -40,7 +39,6 @@ Continue reverse engineering.
 
 Continue until fully mapped and irreducible - stop only when zero meaningful unknowns remain.
 ```
-
 </details>
 
 <details>
@@ -58,7 +56,6 @@ Continue implementation using the existing reverse-engineering docs as source of
 
 Continue until the work is COMPLETE and stable - stop only when zero critical TODOs remain.
 ```
-
 </details>
 
 ---
@@ -73,26 +70,28 @@ Run `npx knip --fix` to automatically remove or refactor unused code and depende
 
 This helps clean up the codebase by eliminating unnecessary components.
 ```
-
 </details>
 
 <details>
-<summary><strong>JS/TS: Update dependencies</strong></summary>
+<summary><strong>JS/TS: Update dependencies (loopable)</strong></summary>
 
 ```md
-Run `npx npm-check-updates -u` to update package.json with the latest dependencies.
+Loop through every outdated dependency one at a time until the list is empty and everything is green.
 
-Then, run `npm install` or `pnpm install` to install the updated versions.
+Start by using `npx npm-check-updates` to identify outdated packages and their latest versions. For each outdated package, update only that package in `package.json` using `npx npm-check-updates -u` with an appropriate package filter, then run `npm install` or `pnpm install` to install the updated version.
 
-Check the changelogs for any breaking changes, make required adjustments, and ensure nothing is broken.
+After each package update, check the changelog and release notes for breaking changes, make any required code or config adjustments, then run the full validation suite: build, type-check, and tests.
 
-If issues arise, revert the version changes to the last working one and reinstall dependencies.
+If anything breaks, fix the issue before moving on. If the package cannot be upgraded safely, revert that package's version change to the last working version, reinstall dependencies, and commit the working state.
+
+Commit after each successful package upgrade with a clear message. Continue package by package until there are no outdated dependencies left and build, type-check, and tests all pass.
 ```
-
 </details>
 
 <details>
 <summary><strong>Complete overhaul and update AGENTS.md</strong></summary>
+
+  Reference: <https://x.com/0xSero/status/2064197526262083830>
 
 ```md
 Review every file in this repository and identify incomplete abstractions, repetitive logic, duplicate types, unclear naming, unnecessary complexity, inefficient code paths, and meaningless or outdated comments.
@@ -111,7 +110,6 @@ Verify correctness with appropriate tests, checks, or validation steps.
 
 Update AGENTS.md so it accurately reflects the current codebase. Keep it concise, current, and free from outdated or misleading information. Include only the essential modules, architecture overview, data flow, interaction points, initialization steps, and important guidance for future coding agents.
 ```
-
 </details>
 
 ---
@@ -130,7 +128,6 @@ For frontend applications, use `vitest` for smoke testing.
 
 Automatically identify and fix bugs and edge cases as you go.
 ```
-
 </details>
 
 <details>
@@ -145,8 +142,18 @@ For frontend applications, use `vitest` for smoke testing.
 
 Automatically identify and fix bugs and edge cases as you go.
 ```
-
 </details>
+
+<details>
+<summary><strong>Flaky-test exterminator (loopable)</strong></summary>
+
+Reference: <https://x.com/ericzakariasson/status/2064122350866682100?s=20>
+
+```md
+run my test suite 20 times, collect every intermittent failure, fix or quarantine the flaky ones, and don't stop until you get 5 consecutive fully-green runs.
+```
+</details>
+
 
 ---
 
@@ -165,7 +172,6 @@ Reference:
 Create a comprehensive task list that covers every aspect of the plan so that it keeps you focused across compactions - at least 20 items or more if appropriate.
 Do not stop until all changes have been verified.
 ```
-
 </details>
 
 ---
@@ -178,7 +184,6 @@ Do not stop until all changes have been verified.
 ```md
 Make a directory in "docs" called "{{REPO_NAME}}" and make a PRD with technical details (e.g. including system prompts), read/reverse-engineer this https://chromewebstore.google.com/detail/REPO_NAME
 ```
-
 </details>
 
 ---
@@ -195,6 +200,5 @@ Reference:
 ```md
 xbox360 UI meets Spike Jonze's Her meets Liquid Glass
 ```
-
 </details>
 
