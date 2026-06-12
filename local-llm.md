@@ -92,37 +92,21 @@ Use this when asking an agent to build and benchmark a local-model harness. Repl
 ```text
 You are an expert agent harness optimization engineer.
 
-Create a lightweight, model-specific local LLM harness/proxy optimized for real usage and evaluated with BenchLoop or an equivalent benchmark suite:
+Build a lightweight, model-specific local LLM harness/proxy for real usage and evaluate it with BenchLoop or an equivalent suite for:
+- Qwopus3.6-27B-v2-MTP-Q4_K_M.gguf, temp=0.85
+- Qwopus3.6-35B-A3B-v1-Q5_K_M.gguf, temp=0.85
 
-* Qwopus3.6-27B-v2-MTP-Q4_K_M.gguf, temp=0.85
-* Qwopus3.6-35B-A3B-v1-Q5_K_M.gguf, temp=0.85
-* Qwopus3.6-27B-v2-MTP-IQ4_XS.gguf, temp=0.80
+Use the local runtime already available, preferably llama.cpp / llama-server. Do not modify system prompts, task prompts, user prompts, or tool-call formats.
 
-Use the local inference runtime already available in this workspace, preferably llama.cpp / llama-server if present.
+Do not cheat. Do not game benchmarks, exploit evaluator quirks, memorize datasets, hardcode task IDs/answers, synthesize expected outputs, add benchmark-specific branches, or use hidden answer correction. Prefer a lower fair score over a higher unfair score.
 
-Do NOT modify the original system prompt, task prompts, user prompts, or tool-calling formats.
+Forbidden: semantic post-processing; instruction solving outside the model; extraction value rewriting; math/date/unit/value/reasoning canonicalization; final-answer injection; direct-answer injection; tool-call synthesis; missing-call synthesis; code semantic repair; benchmark literals, expected outputs, dataset-specific logic, or leaderboard-specific behavior.
 
-Do NOT overfit to BenchLoop or any single benchmark. Do not hardcode task IDs, exact benchmark answers, hidden constants, leaderboard-specific behavior, or category-specific token caps whose only evidence is one benchmark score. Benchmarks are for discovering failure patterns; promote only fixes that are general enough to help real clients.
+Allowed: transport retries, timeout/crash recovery, malformed stream handling, parsing already-emitted JSON/tool calls/structured content, escaping/decoding/whitespace/delimiter/JSON-envelope fixes that preserve emitted content, validation that rejects/retries/flags, syntax/schema repair only from already-emitted content, runtime tuning, stop sequences, token guardrails, trace logging, and model-specific configs.
 
-Build harness-level improvements only, tuned for the quirks:
+Implement the harness, parser, runtime loop, benchmark runner, logging, failure summaries, and real-use validation prompts. Run at least 15 optimization iterations. Keep raw outputs, run JSON, logs, summaries, and config snapshots for every run.
 
-* Robust response parser: escaping, malformed JSON, partial outputs, batch-call recovery, normalization, date/value cleanup.
-* Main agent/runtime loop: post-processing, retry logic, error recovery, timeout handling, trace logging.
-* Model-specific runtime policy: sampler defaults, stop sequences, parser expectations, broad token guardrails, and isolated corrector pass for malformed or inconsistent structured outputs.
-* Prompt-change isolation: if any preamble, wrapper, or "write code" framing is tested, report it separately and do not use it when the benchmark or app requires fixed prompts.
-* Benchmark integration: runnable benchmark script, config, result logging, failure summaries, and leaderboard-compatible outputs when applicable.
-* Real-use validation: representative prompts for normal chat, extraction, tool use, coding, long-context work, and agent workflows.
-* Iterative optimizer: run the benchmark, analyze failures by category, apply harness-only fixes that generalize, re-run, then validate on real-use prompts.
-* Full forensic audit: inspect every failed or changed task output line-by-line before choosing or promoting any harness change. Promote patterns, not memorized answers.
+Promote only general, production-safe harness fixes that would work for OpenClaw or a similar real client harness, not benchmark-only tricks. Compare benchmark scores, per-category results, speed, reliability, failures, and real-use validation before promotion. Inspect changed/failed outputs line-by-line, audit code/tests for forbidden transforms, report remaining limitations, and keep model-specific policies if they beat one shared policy.
 
-Run at least 15 optimization iterations with BenchLoop or the configured benchmark suite, then validate the best candidates on representative real prompts.
-
-Selection rules:
-
-* Do not fake benchmark scores.
-* Keep every run's raw outputs, run JSON, logs, summaries, and policy/config snapshots.
-* Promote a harness policy only after comparing full benchmark results, per-category scores, reliability, speed, per-task failures, and real-use validation.
-* Prefer simple production-safe policies: broad token guardrails, schema-aware normalization, parser-backed code checks, targeted retries, and traceable repairs.
-* If one shared policy is worse than model-specific policies, report that clearly and keep model-specific configs.
-* Keep the implementation clean, concise, and well-commented.
+Deliver implementation, configs, reproducible commands, iteration results, forensic audit, validation results, final policy per model, and explicit anti-cheating audit.
 ```
