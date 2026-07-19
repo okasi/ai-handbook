@@ -94,9 +94,9 @@ Commit after each successful package upgrade with a clear message. Continue pack
 <summary><strong>Complete overhaul and update AGENTS.md</strong></summary>
 
   References: 
-    - <https://x.com/0xSero/status/2064197526262083830>
-    - <https://x.com/ericzakariasson/status/2057521364622553442>
-    - <https://x.com/gabriel1/status/2075866664864825413>
+- <https://x.com/0xSero/status/2064197526262083830>
+- <https://x.com/ericzakariasson/status/2057521364622553442>
+- <https://x.com/gabriel1/status/2075866664864825413>
 
 ```md
 Desloppify this codebase. Ruthlessly remove any complexity that is not required, and test every feature end to end. Treat simplification, deduplication, reduced code volume, code quality, and complete end-to-end verification as the highest priorities.
