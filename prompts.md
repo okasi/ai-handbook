@@ -93,14 +93,25 @@ Commit after each successful package upgrade with a clear message. Continue pack
 <details>
 <summary><strong>Complete overhaul and update AGENTS.md</strong></summary>
 
-  Reference: <https://x.com/0xSero/status/2064197526262083830>
+  References: 
+    - <https://x.com/0xSero/status/2064197526262083830>
+    - <https://x.com/ericzakariasson/status/2057521364622553442>
+    - <https://x.com/gabriel1/status/2075866664864825413>
 
 ```md
-Review every file in this repository and identify incomplete abstractions, repetitive logic, duplicate types, unclear naming, unnecessary complexity, inefficient code paths, and meaningless or outdated comments.
+Desloppify this codebase. Ruthlessly remove any complexity that is not required, and test every feature end to end. Treat simplification, deduplication, reduced code volume, code quality, and complete end-to-end verification as the highest priorities.
+
+Perform a deep code quality audit of the current codebase. Be extremely thorough and rigorous. Measure twice, cut once.
+
+Review every file in this repository and identify incomplete abstractions, repetitive logic, duplicate types, unclear naming, unnecessary complexity, inefficient code paths, spaghetti code, weak modularity, poor legibility, and meaningless or outdated comments.
 
 Analyze the codebase structure, key components, data flow, interfaces, initialization steps, and interaction points.
 
-Produce and execute a task list to clean up, complete, deduplicate, consolidate, and refactor the codebase into composable, consistent, and maintainable components while preserving existing functionality.
+Rethink how changes should be structured and implemented to meaningfully improve code quality without impacting behavior. Improve abstractions, modularity, succinctness, readability, and legibility.
+
+Produce and execute a prioritized task list to clean up, complete, deduplicate, consolidate, restructure, and refactor the codebase into composable, consistent, and maintainable components while preserving existing functionality.
+
+Be ambitious. When there is a clear path to a better implementation that requires restructuring parts of the codebase, pursue it rather than settling for superficial fixes.
 
 Improve readability and structure so coding agents such as Codex, Claude Code, and Copilot can understand and modify the project effectively.
 
@@ -108,7 +119,7 @@ Reduce technical debt, simplify logic, remove duplication, lower total lines of 
 
 Keep the directory structure minimal and intuitive. Align directory and file names with the material-icons naming convention where applicable.
 
-Verify correctness with appropriate tests, checks, or validation steps.
+Try every feature end to end, including relevant integrations, interactions, and failure paths. Verify correctness with appropriate tests, checks, builds, runtime validation, or other validation steps.
 
 Update AGENTS.md so it accurately reflects the current codebase. Keep it concise, current, and free from outdated or misleading information. Include only the essential modules, architecture overview, data flow, interaction points, initialization steps, and important guidance for future coding agents.
 ```
