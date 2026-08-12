@@ -25,6 +25,20 @@ then repeat until no issues are found.
 </details>
 
 <details>
+<summary><strong>Simple review w/o subagents</strong></summary>
+
+```md
+When done, with fresh eyes,
+review your changes,
+fix any issues,
+then repeat until no issues are found.
+
+Be brutally honest about whether all work is complete,
+then repeat until no issues are found.
+```
+</details>
+
+<details>
 <summary><strong>Reverse engineering</strong></summary>
 
 ```md
